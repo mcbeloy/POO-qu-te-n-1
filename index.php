@@ -14,10 +14,10 @@ echo $car->forward();
 var_dump($car);
 var_dump(Car::ALLOWED_ENERGIES);
 
-require_once 'Camion.php';
-$camion = new Camion('storage capacity', 0, 'black', 3, 'full');
-echo $camion->forward();
-var_dump($camion);
+require_once 'Truck.php';
+$truck = new Truck('black', 3, 'full', '0');
+echo $truck->forward();
+var_dump($truck);
 
 // Moving bicycle
 echo $bicycle->forward();
@@ -56,8 +56,8 @@ echo $car->brake();
 
 //Moving camion
 
-echo $camion->forward();
-echo '<br> Vitesse du camion: ' . $camion->getCurrentSpeed() . ' km/h' . '<br>' . PHP_EOL;
-echo $camion->brake();
-echo '<br> Freinage du camion: ' . $camion->getCurrentSpeed() . ' km/h' . '<br>' . PHP_EOL;
-echo $camion->brake();
+echo $truck->forward();
+echo '<br> Vitesse du camion: ' . $truck->getCurrentSpeed() . ' km/h' . '<br>' . PHP_EOL;
+echo $truck->brake();
+echo '<br> Freinage du camion: ' . $truck->getCurrentSpeed() . ' km/h' . '<br>' . PHP_EOL;
+echo $truck->brake();

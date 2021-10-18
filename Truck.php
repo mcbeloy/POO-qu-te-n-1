@@ -2,10 +2,10 @@
 
 require_once 'Vehicle.php';
 
-class Camion extends Vehicle
+class Truck extends Vehicle
 {
 
-// Camion.php
+// Truck.php
 
     protected string $color;
 
@@ -15,10 +15,15 @@ class Camion extends Vehicle
 
     protected int $nbWheels;
 
-    public function __construct(string $color, int $nbSeats)
+    protected int $storageCapacity;
+
+    protected string $energy;
+
+    public function __construct(string $color, int $nbSeats, string $energy , int $storageCapacity)
     {
         $this->color = $color;
         $this->nbSeats = $nbSeats;
+        $this->storageCapacity = $storageCapacity;
     }
 
     public function forward(): string
@@ -80,4 +85,13 @@ class Camion extends Vehicle
     {
         $this->nbWheels = $nbWheels;
     }
+    public function getStorageCapacity():int
+    {
+        return $this->storageCapacity;
+    }
+
+    public function setStorageCapacity(int $storageCapacity): void 
+       {
+        $this->storageCapacity = $storageCapacity;
+       } 
 }

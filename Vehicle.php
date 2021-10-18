@@ -12,6 +12,8 @@ class Vehicle
 
     protected int $nbWheels;
 
+    protected int $storageCapacity;
+
     public function __construct(string $color, int $nbSeats)
     {
         $this->color = $color;
