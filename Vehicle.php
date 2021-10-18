@@ -79,4 +79,6 @@ class Vehicle
     {
         $this->nbWheels = $nbWheels;
     }
+ 
 }
+
